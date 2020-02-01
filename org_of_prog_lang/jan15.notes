@@ -1,0 +1,105 @@
+Agenda
+	Overview of chapter 1 topics
+
+Notes
+
+
+Lecture
+
+	Programming domains
+		Each domain has different requirements for accomplishing different tasks
+		EX: Scientific, Business, Artificial intelligence, Systems, Web
+
+	Language evaluation criteria
+		Readability
+			Ease of reading and understanding
+		Writability
+			Ease of use to create a program
+		Reliability
+			Consistent, predictable performance in all conditions
+		Cost
+			Cost of development, running
+
+	Readability
+		Simplicity
+			Small number of rules and features
+			Minimal multiplicity or duplication
+		Orthogonality
+			Consistent way to combine feature set
+			Lack of orthogonality leads to hacks and workarounds
+				Exceptions complicate the language
+		Data types
+			Inadequate methods of defining data results in hacks, decreasing readability
+		Syntax
+			Different methods of defining functionality creates different readiblity
+			Braces can group code together
+			Engligh like language can help understand what code is doing
+			Boils down to -
+				Good keywords
+				Readable structure
+
+	Writability
+		Simplicity
+			Small number of primitive constructs
+		Orthogonality
+			Consistent rules to combine the constructs of the language
+			EX: array of ints, array of arrays, list of booleans
+		Abstraction
+			Ability to use code without understanding its details
+			Building up complex functionality through simpler functionality
+		Expressivity
+			Multiple or infinite ways to accomplish the same tasks
+
+	Reliability
+		Type checking
+			Static check for proper type operations
+			EX: Do not allow subtraction of double from integer
+		Exception handling
+			Ability to handle errors in the program without crashing the computer
+		Aliasing
+			More than one way to access the same memory
+		Readability and Writability
+			Higher read/writeability decreases bugs and unreliable code patterns
+
+	Cost
+		Training
+			Simplicity and orthogonality reduces training cost
+		Writing
+			Writablility reduces the cost of writing progams
+		Compiling
+			Negligable? Some languages cost more to compile...
+		Executing
+			Many runtime checks or slow languages increase cost of execution
+			In addition, bugs and ammortized actions increase cost
+		Reliability
+			Reliable programs which do not break as often reduces the cost of repair and refactoring
+
+
+	Tradeoffs
+		Reliability vs cost
+		Reliability vs writablility
+		Writability vs readibility
+
+	Influences on language design
+		Von nueman computers
+		Languages are based on underlying architecture
+
+	Language Category
+		Imperative
+			Variables, assignment, iteration
+			Generally object oriented
+			EX: Scripting, visual, C++, Javam Javascript, etc
+			State changes and has an order of execution
+		Functional
+			Based on mathematical functions
+			No variables, no iteration
+			EX: LISP
+		Logical
+			Rule based language
+			Rules are not specified in order
+			Rules produce an output
+			EX: Prolog
+		Markup
+			Not programming language, more of a design tool
+			EX: HTML, Markdown
+

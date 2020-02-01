@@ -1,0 +1,32 @@
+Agenda
+	Review
+	Parse tree demonstration
+	Semantics lecture
+
+
+Notes
+	This may have been the single most boring class in history
+
+Lecture
+
+	Operational semantics
+		Describe individual values
+		Uses the state of the machine to describe meaning
+		Uses coded statements
+
+	Denotational semantics
+		Describes the function of some syntax
+		Uses the state of the program to describe meaning
+		Use mathematical functions
+		EX: binary numbers, map variables to value
+
+	Axiomatic semantics
+		Define the logic of a program
+		Describes "axioms" or truths of a program
+		Also proves correctness of a program
+		EX:
+			If/else
+			Precondition/postcondition
+			Assertion
+
+

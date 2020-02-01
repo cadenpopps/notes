@@ -1,0 +1,124 @@
+Agenda
+	Syllabus
+	Lecture
+	C program examples
+
+
+Notes
+	Everything will be posted online
+	Projects/assignments are in the form of modifying the xv6 operating system
+	Successful students submit all projects
+	Everything written in C - xv6 is in C
+	Extra credit at professor discretion
+	Curve if grades are low
+	Attendance matters
+	Exams
+		Combination of multiple choice and short answer
+		Will potentialy provide previous exam questions/examples
+	Grading
+		Exam 1 - 20%
+		Exam 2 - 15%
+		Quiz - 5%
+		Programming Projects - 48%
+		Exercises - 12%
+	srtace utility - returns system calls used by program
+
+
+Lecture
+
+	What will we learn?
+		OS design
+			Policy
+			Mechanism
+			Abstraction
+			Layering
+		Os implementation
+			How OS works under hood
+			xv6
+		Hands on OS programming
+			4 projects and 4 excercises
+		Trade offs OS's face
+
+	What is an OS
+		Interface between hardware and applications
+		Single "Layer" in computer
+			User
+			Application
+			Operating System
+			Hardware
+		Sits on top of "Hardware"
+			I/O  <---> CPU <---> Main memory
+		Narrow:
+			Recourse manager
+			Vontroller
+			Library of routines for accomplishing functionality
+		Broad:
+			Provides an abstract interface for using a hardware
+
+	What is the OS responsible for
+		Abstraction
+			Makes it easier to run programs
+		Multiplexing
+			Shares resources among applications
+		Security
+			Isolates applications to cntain bugs
+		Interaction between applications
+		High Performance
+			Good instructions and interface
+
+	The OS provides system calls to accomplish:
+		Processess
+		Memory allocation
+		File access
+		Directories and files
+		Security
+		Inter process communication
+		Networking, time, utilities
+
+	Three pieces
+		Virtualization
+			Allocate virtual resource
+			Each app believes it owns the resource
+		Concurrency
+			Simultaneous operations
+			Easier the more independent the applications are
+		Persistency
+			Store data permenantly
+			Abstract data storage to apps
+			Data lives longer than individual programs
+
+	What does an OS interface look like
+		System calls
+			ex: fd = open("output", 1);
+				n = write(fd, "hello world", 8);
+				close(fd);
+
+	How writing to file works in C
+		Close your output file descriptor (1)
+		Open a new file or output (will get lowest availible descriptor, 1)
+		Write to stdout with printf
+
+	How pipe works in C
+		Create array of size 2
+		Call pipe on new array
+			Will return read fd[0] and write fd[1] descriptors into array
+		Read from pipe using array[0]
+		Write to pipe using array[1]
+		ex: int[] fd = new Array(2);
+			pipe(fd);
+			n = read(fd[0], 8);
+			n = write(fd[1], "hello world", 8);
+			close(fd2);
+
+	Shells
+		User level program/utility
+		Provides quick access to some operating system functionality
+			Pipe
+			Read
+			Write
+		Simplify the execution of programs
+
+
+todo
+	Register for exams
+	Get textbook

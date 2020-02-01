@@ -1,0 +1,108 @@
+Agenda
+	Discussion of Pen
+	Balloon + hair static demonstration
+	Lecture slides
+
+Notes
+
+	Forces acting on a pen
+		When held:
+			Gravity + normal
+		When dropped:
+			Gravity + air resistance
+		Pen exerts same force of gravity on earth + everyone in the room
+
+	Humidity affects balloon's stickiness
+
+	Make a model as simple as possible to describe what you need
+
+	Regarding charge in this class: only electrons are added and removed
+
+	Static electricity is deterministic - based on material and charge you will get certain results
+
+
+
+Lecture
+
+	Balloon with static from hair demonstration
+		Since the paper moves, there IS a force - ΣF=ma
+
+	Two pictures on title slide
+		1: balloons repel each other
+		2: balloon sticks to (wall?)
+
+	Structure of matter
+		Attraction:
+			Protons and electrons attract
+			Electrons repel each other
+			Protons repel each other
+			Neutrons do not interact with self or others
+
+		The particles create these interactions due to the property of Electric Charge
+
+		Electrons - negative charge (negative number)
+		Protons - positive charge (positive number)
+		Nuetrons - no charge (zero)
+
+	Electric Charge
+		Intrinsic property of matter
+		Charge of object is dictated by the deficiency or excess of electrons
+			The charge of an object must be a multiple of the charge of one electron
+			q = 1.602 * 10^(-19)C
+
+	Conductors
+		Materials in which electrons (charges) move between atoms easily
+		EX: copper, gold, etc.
+
+	Insulators (Dielectrics)
+		Materials in which electrons (charges) cannot move around much, do not transfer between atoms easily
+		EX: wood, rubber
+
+	Charging by friction
+		_Contact electrification_ - Triboelectric effect - Static electricity
+			The ability of a object to gain charge through contact with another object
+				Transfer of electrons
+			Depends on
+				Roughness
+				Chemical bonds or structure
+				etc
+			Triboelectric Table
+				List of materials in order of willingness to share electrons
+				Ex: glass, mica, nylon, fur, silk, paper, cotton, wood, acrylic, polystyrene, rubber, sulfur, saran wrap
+				Leftmost materials are more likely to lose electrons when rubbed against materials further right
+			Applications
+				Rockets cannot launch through certain clouds due to contact electrification
+
+	Charging by Induction
+		Charging an object with another without losing the second object's electrons
+			Charging without the transfer of electrons between the two objects
+		When you use a negative object, electrons escape to the ground
+		When you use a positive object, electrons are stolen from the ground
+		EX:
+			Materials: negatively charged rod, conductor with neutral charge
+			As the negatively charged rod is moved toward the conductor, electrons move inside the conductor
+				Positively charged electrons move toward the negative pole, negative move away
+			Now ground the conductor (connect it to the ground with a wire or something else)
+			When the negative charged rod moves toward the conductor, the electrons move away and into the ground
+				This results in a positively charged conductor, while the rod never lost electrons
+
+	Charging by Polarization
+		Electric forces may appear on objects with no charge
+		How it works
+			Move a charged object towards a neutral dielectric object
+			This causes the electrons to spend more time on one side
+			This creates a charge in the nuetral object
+		Balloon illustration
+			It sticks to the wall, so the forces must be in equilibrium
+			We know the wall is an insulator (non-metal)
+			Known forces
+				Gravity (down)
+				Normal force (away from wall)
+				Friction (up)
+				Mystery attractive force (towards the wall)
+			Electric force (?) pulls balloon towards the wall - what is this force?
+				Creates strong enough normal force to cancel gravity with friction
+				Balloon is negatively charged
+				Positive charges in wall attract the negative charge in wall - polarization
+				Wall (dielectric) does not conduct well, does not lose electrons quickly
+

@@ -1,0 +1,47 @@
+Agenda
+	Lecture
+	Sample programs
+
+Notes
+	{Process}
+		A program in execution - after initialization of stack, heap, and data
+
+Lecture
+
+	Responsibilities of the CPU
+		Ease of use
+		Sharing
+		Isolation/security
+		Efficiency
+
+	Executing a program
+		CPU
+		Memory
+			Load program from disk
+			Load data from disk
+			Init heap
+			Init stack
+		Disk
+			Program
+			Static data
+
+	Process
+		Definition: A program in execution
+		Components of a process
+			Memory
+				Adress space
+				EX: code, data, heap, stack
+			_Registers, IP_
+			Open files
+			Many overheads
+		API - provided by operating systems
+			Creation
+				EX: fork in Unix and Linux
+			Termination
+			Wait
+				Wait for process to die
+			Control
+				Suspend and resume
+			Status
+				Get status of process
+

@@ -1,0 +1,83 @@
+Agenda
+	Review
+	Lecture
+
+Notes
+	TA
+		Saif Ali
+		Friday 2:30-4:30pm
+		PHY 1.602 (small conference room)
+
+	To prepare for an exam with many equations
+		Know the meaning of each variable in each equation
+
+	Symmetric calculations in this class
+		Allows us to ccancel many symmetric vectors
+
+	Many physcial processes can be modeled by two individual vectors where the result is modeled by a third orthogonal vector
+		This is why we have cross product
+
+	100% chance of a right hand rule question
+
+	Torque is force x (distance from axis of rotation)
+
+Lecture
+
+	Discrete electric dipole review
+		E(y) = q / (4 * pi * e(0) * r(+q)^2) -  q / (4 * pi * e(0) * r(-q)^2)
+		If y>>d we can derive to
+		E(y) = qd / (2 * pi * e(0) * y^3)
+
+	Continous line of charge
+		E = 1 / k * INTEGRAL((dq / r^2) r(hat))
+		Effect of a line of charge is perpendicular to the line
+			Each charge's y components are cancelled by another (opposite) charge on the line
+
+	Uniformly charged disc
+		Effect of electric field is along the Z axis, AKA perpendicular
+		R(0) is radius of disc
+		Q is total charge of the disc
+		Sigma is charge density = Q / A
+			Total charge divided by area
+		Theta represents the angle from the X axis
+		Derivation
+			E = 1 / k * INTEGRAL((dq / r^2) * r(hat))
+			Little r is = sqrt(R^2 + z^2)
+			E = 1 / k * INTEGRAL((dq / (R^2 + z^2)) * r(hat))
+			cos(ALPHA) is vertical component
+			sin(ALPHA) is horizontal component
+			E = 1 / k * INTEGRAL((dq / (R^2 + z^2)) * cos(ALPHA) * z(hat))
+			sin(ALPHA) (horizontal) component is cancelled by another equal but opposite charge
+			E = 1 / k * INTEGRAL((dq / (R^2 + z^2)) * |z / (R^2 + z^2)^(1 / 2)| * z(hat))
+			E = 1 / k * INTEGRAL((z * dq / (R^2 + z^2)^(3/2)) * z(hat))
+			E = 1 / k * INTEGRAL((z * SIGMA * dA / (R^2 + z^2)^(3/2)) * z(hat))
+				dA = (R * dTHETA) * (dR)
+			Depends on change in radius and change in angle (arclength)
+			E = 1 / k * INTEGRAL(INTEGRAL(((z * SIGMA * R * dTHETA * dR) / (R^2 + z^2)^(3/2)) * z(hat)))
+			First integral goes from 0 to R(0)
+			Second integral goes from 0 to 2PI
+			Skip some steps, solve the integral
+			E = SIGMA / (2 * E(0)) * |1 - (z / (R^2 + z^2)^(1/2))| * z(hat)
+
+	EX: 3 charges
+		Three charges 8cm between them
+			-5C
+			-2C
+			-5C
+		Point p 6cm to the right of center charge
+		We can tell by intuition that the direction of the electric field at P is to the left
+			Vertical componenets cancel
+			All charges are negative so the pull will be towards the center of the charges
+		Solve:
+			Electric field due to A and C:
+				E = 1/k * q/r^2
+				E = 1/k * (-5 / 10^2)cos(ALPHA)
+				E = 1/k * (-5*10^-6) / (.1^2) (.06/.1)
+			Electric field due to B
+				...
+				1/k * (2*10^-6) / (.06^2)
+			Add Fields
+				-1.04 * 10^-7 N/C
+
+	Electric dipole - force and torque
+

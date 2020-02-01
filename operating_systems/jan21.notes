@@ -1,0 +1,57 @@
+Agenda
+	Login to CS1 and other online resources
+	Demonstration of code
+	Slides
+	Demonstration of xv6
+
+
+Notes
+	Exam question: how many times does the program fork?
+	[System calls] are important
+
+
+Lecture
+
+	How many forks?
+		for (int i = 0; i < n; i++)
+			int pid = fork();
+		Answer: 2^n
+
+	How to get the fastest CPU performance
+		{Direct execution}
+			Run code directly on CPU
+			Code has complete control of CPU
+		Issues with direct execution
+			Process could do something illegal
+				R/W restricted data
+			Process could run forever
+				OS needs to some control to schedule processes
+			Process could do something slow
+				OS now has to wait for process to complete
+				EX: I/O
+
+	How to restrict processes
+		Use [privilege levels]
+			Processes generally run in user level (restricted)
+			OS runs in kernel level (unrestricted)
+			EX: sudo for root level
+		How can processes get restricted access?
+			Use [system calls] to do restricted operations
+		How are system calls achieved?
+			Problem: process cannot elevate permissions by itself
+			Solution: use hardware supported interrupt [trap] or [int] to execute a system call
+			EX:
+				read(): movl $6, %eax; int $64
+				This interrupt tells the hardware to do a certain operation
+				Uses a lookup table to find the interrupt handler
+				In this example, interrupt number 64 tells the OS to execute system call number 6
+				Another example would be divide by 0 - requires an interrupt
+			{Interrupt}
+				Raises the permissions
+				Executes a specific subroutine
+				Returns control to the process
+
+
+
+
+

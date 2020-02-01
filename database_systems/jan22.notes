@@ -1,0 +1,147 @@
+Agenda
+	Reminders about project, group sign up, and prerequisite form
+	Projector issues
+
+
+Notes
+
+	How to prepare for the exams
+		Do the homeworks
+		Review the lecture notes/slides
+		Read the textbook
+		Attend class in order to not miss examples
+
+	Structure of exam
+		Not multiple choice
+		Problem solving
+		Combination of theory, concept, and definitions
+
+
+Lecture
+
+	Data abstraction
+		Data independence
+			We want to be able to change the implementation of various levels of software
+				Physical schema
+				Conceptual schema
+				External schema
+		Abstraction allows us to keep our data and implementation of various layers independent and thus stable
+		{Physical data independence}
+			Internal schema can be changed without having to change what the user sees or how the code is structured
+		{Logical data independnce}
+			Conceptual schema can be changed without having to change what the user sees or how the physical database is structured
+
+	File system critique
+		System administration becomes difficult as the file system expands
+		Difficult to make changes to file system structure
+		Omits security features
+		No data abstractuon
+			Structural dependence
+			Data dependence
+			Makes file system cumbersome
+		Compared to a database with a database system, filesystems lack
+			Security
+			Ease of operation and administration
+
+	DBMS languages
+		Data definition language (DDL)
+			Used to specify the conceptual schema, but can also be used to define physical and user level schema
+			Alternatively
+				Storage definition language (SDL) - describes the physical schema
+				View definition language (VDL) - describes the external schema
+			Result of compiling DDL is a [catalog] file
+			[Catalog]
+				Set of tables stored in a file which represents the data and structure of a database
+		Data manipulation language (DML)
+			Used to interact with a database
+			High level DML
+				Describe what data is needed without specifying how to get it
+				Can be embedded into other programming languages
+			Low level DML
+				Describe what data you want and how to retrieve data
+				Can be run directly to a database
+
+	Data model
+		Schema
+			Description of data
+			EX: tables, attributes, constraints, domains
+		Model
+			Tools and language to describe
+				Conceptual and external schema (DDL)
+				Integrity constraints, domains (DDL)
+				Possible operations on data (DML)
+				Directives that influence the physical schema performance (SDL)
+
+	DBMS Interfaces
+		Stand alone query languages
+		API interface
+			Implemented in code
+		User friendly interface
+			GUI application
+		Report generation languages
+		DBA friendly interfaces
+
+	Database system components
+		Complexity of database system depends on
+			Size
+			Functionality
+			Culture/Usage
+			Environment
+		Database solutions must be cost effective and strategically viable
+
+	Data dictionary
+		Stores metadata of a database such as
+			Schema description
+			Design decisions
+			User information
+		Active data dictionary
+			Accessed by the DBMS and DBA/Users
+		Passive data dictionary
+
+	Types of database systems
+		Data model
+			Traditional
+				Relational
+				Network
+				Heirarchical
+			Emerging
+				Object oriented
+				Object relational
+				Temporal
+				Spatial
+		Single vs multi-user
+			Single-user databases used with micro or personal computers
+			Most DBMS are multi-user
+		Centralized vs distributed
+			Centralized databases use a single computer with one database
+			Distributed databases use many computers with many databases
+		Use Case
+
+	Hierarchichal Database Model
+		Pros
+			Conceptually simple
+			Secure
+			Data independence
+			Effeciency dealing with a large DB
+		Cons
+			Complex implementation
+			Difficult to maintain
+			No structural independence
+			Limited implementation
+
+	Network Database Model
+		Pros
+			Missed this slide
+		Cons
+			Missed this slide
+
+	Relational Database Model
+		Pros
+			Structural independence
+			Simpler conceptually
+			Easier design, implementation, management and use
+			AD hoc ques
+			Powerful DMBS
+		Cons
+			Large overhead
+			Potential for poor implementation

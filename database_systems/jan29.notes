@@ -1,0 +1,53 @@
+Agenda
+
+
+Notes
+	No recommendations for free software for building ER diagrams
+
+Lecture
+
+	Cardinality
+		Maximum cardinality
+			One to one
+			One to many
+			Many to one
+			Many to many
+		Minimum cardinality
+			Zero
+			One (or more)
+		EX:
+			works_for (department)
+				Maximum cardinality: many to one
+				Minimum cardinality: one employee and one department
+		Cardinality ratio is the ratio of participants of each side of a relationship
+			EX: 1:N --> one to many
+		Participation constraint means one side of a relationship requires the other side to exist
+			This is represented by a double line on the link
+		These contraints and notations require binary relationships and do not apply to higher order relationships
+
+	Min/max structural constraints
+		Numerical or symbolic representation of the required number of participants in a relationship
+		EX:
+			(0, 1) for employees managing a department
+				This means an employee can manage 0-1 department
+		Default is (0, N)
+
+	Multi-way relationships
+		Sometimes binary relationships cannot model the real mini-world
+		In these cases, we must use a higher order relationship denoted by the number of objects participating
+			Binary - 2 participants
+			Ternery - 3 participants
+			N-ary - N participants
+		N-ary relationships are not equivalent to N binary relationships
+		Single number representations of participants for N-ary relationships are meaningless
+		Min/max gives a range which allows it to function as a constraint
+
+	Relationships
+		Relationships can be recursive
+			EX: EMPLOYEE manages EMPLOYEE
+		Relationships can have attributes
+			EX: EMPLOYEE works_on PROJECT
+				works_on can have attribute hours_per_week
+
+
+

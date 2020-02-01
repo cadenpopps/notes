@@ -1,0 +1,105 @@
+Agenda
+	Review
+		Gravity
+		Coulomb
+
+	Chapter 21
+		21.4 Electric field and electric forces
+		21.6 Electric field lines
+		21.5 Electric field calculations
+		21.7 Electric dipoles
+
+
+Notes
+
+	Coulomb's law describes the relationship between electric charges at distance {r}
+
+	3 equations before electric field calculations
+		Coulombs
+		Point charge electric field
+		Force of charge in an electric field
+
+	Microwaves
+		Electric dipole - water molecules are like mini electric dipoles
+		Continously flipping the charge in the microwave rotates the H20 and gain energy
+
+	Electric fields propogate near the speed of light
+
+	A derivative measures how much a change in a variable effects the output of a function
+
+
+Lecture
+
+	Electric field
+		E = 1/(4 * PI * E0) * q(1)/(r^2) * {r}
+		Describes the electric field due to a point charge
+			Distance is important
+		Force on a charge q(2)
+			F = q(2) * E
+		Physical: {vector field due to charges}
+			Electric field lines (21.6)
+		Mathematically: {electric force per unit charge}
+			E = F(E) / q
+			Electric field calculations (21.5)
+
+	Electric field lines
+		Graphical representation of the vector field of an electric field
+		The arrows describe the direction and intensity of the electric field
+			Direction of line represents the direction
+			Density of lines represents the magnitude
+		Field lines always point away from positive charges
+		Direction of the force on an electric charge in the field
+			Same direction of arrow if charge is positive
+			Opposite direction of arrow if charge is negative
+		Magnitude of the force on an electric charge in the field scales with the magnitude of the charge
+		Rules
+			Field lines do not cross
+			Begin/end on charges or go to infinity
+
+	Point charge
+		The source of an electric charge - creates an electric field
+
+	Electric field calculations
+		Basic problem: what is the electric field at an arbitrary point given some point charges
+			Solution: add the vectors from all charges
+		Two cases:
+			Discrete distribution of charges
+				Vector math (summation)
+			Continuous distribution of charges
+				Integral vector math
+
+	Electric dipole
+		Pair of point charges with equal but opposite magnitude and distance d from each other
+		p = qd
+			d has the opposite direction of the electric field (goes in the negative direction)
+			q is the same for both charges, we use absolute value
+		EX: Find the electric field due to a dipole in the direction of the axis containing the pole. Assume the distance between poles is much smaller than the distance to the dipole
+			Solution: Magnitude of the component along the axis. Since one charge is closer to the testing point than the other, the charge is slightly positive or negative
+			E(y) = E(+q)(y) + E(-q)(y)
+			E(y) = q / (4 * pi * e(0) * r(+q)^2) -  q / (4 * pi * e(0) * r(-q)^2)
+			E(y) = q / (4 * pi * e(0) * y^2) * |(1 - d/2y)^-2 - (1 + d/2y)^-2|
+			Since y is much greater than d, (1 + d/2y)^-2 = (1 + d/y)
+			E(y) = q / (4 * pi * e(0) * y^2) * |2d/y|
+			E(y) = qd / (2 * pi * e(0) * y^3)
+			[This derivation is valid when y is much greater than d]
+			Much greater may mean 10x or hopefully bigger than that
+			Don't forget 4 * PI * E(0) = K = 9.0 * 10^-9 N(m^2)/(C^2)
+
+	Uniform distribution of charges
+		Charge density is the same in all points of an object
+		Definitions of charge densities
+			Linear: LAMBDA = Q/L (C/m)
+			Surface: {strange o} = Q/A (C/m^2)
+			Volumetric: PHO = Q/V (C/m^3)
+
+	Line of charge
+		Electric field at any point along x
+		dE = 1/k * dq/r^2 * ^r --> E = 1/k * INTEGRAL((dq / r^2) * r)
+		E = lambda/k * INTEGRAL((dy / r^2) * r)
+		E = lambda/k * INTEGRAL((dy / x^2 + y^2) * r)
+		E = lambda/k * INTEGRAL((dy / x^2 + y^2) * (cos(ALPHA)x + sin(ALPHA)y))
+		E = lambda/k * INTEGRAL((dy / x^2 + y^2) * (x / (sqrt(x^2 + y^2) - y / sqrt(x^2 + y^2)))
+		E = lambda/k * INTEGRAL((dy / x^2 + y^2)^(3/2) * (xx(hat) * yy(hat)))
+		...
+		E = lambda/k * (Q / (x(a^2 + x^2)^(1/2)) * x(hat))
+

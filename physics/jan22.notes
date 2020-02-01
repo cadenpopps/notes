@@ -1,0 +1,72 @@
+Agenda
+	Homework reminder
+	Powerpoint
+
+
+Lecture
+
+	Material types
+		Conductors
+			Allows electrons to flow easily
+			Allows electricity to flow easily
+		Insulators
+			Does not allow electrons to flow easily
+			Does not allow electricity to flow easily
+
+	Methods of charging objects
+		Friction
+			Electrons transfer via contact from material to material
+		Induction
+			Electrons transfer between a material and the "ground" due to proximity to another charged material
+		Polarization
+			Electrons change their rotation around their molecule, causing a small, temporary polarization in an insulator
+
+	Review/example
+		EX: Two metal spheres, one charged negatively, are held in close proximity
+			Result: electrons distribute throughout both spheres evenly
+			Process: electrons repel each other, and since both materials are conductors, they distribute evenly and maintain homeostatis
+
+	[Coulomb's Law]
+		Represents the electric force one object does to another
+		[F(12) = k * ((|q1| * |q2|) / (r^2)) * r]
+			e(0) = Permittivity of free space = 8.852 * 10^-12 C / (m^2)
+			q1 = Amount of charge in object 1 (in C)
+			q2 = Amount of charge in object 2 (in C)
+			r = distance between objects 1 and 2 (in m)
+			k = 1 / (4 * PI * E(0)) = 9.0 * 10^-9 N(m^2)/(C^2)
+		F(21) = -F(12) = k * ((|q1| * |q2|) / (r^2)) * -r
+		The [1] and [2] repersent object one and two, so (12) means the force object 1 exerts on object 2
+
+
+	Charge is quantized
+		[Electron charge]
+			Elementary charge
+			[q(e) = e ~ 1.6 * (10^-19) C]
+		The charge (Q or q) is an integer multiple of the electron charge
+
+	Priciple of superposition
+		The net (total) force on an object is the vector sum of all the individual forces
+		Example problem:
+			Assume a proton (q = +1.6 * (10^-19) C) is at the origin and an electron at (2, 2) meters. What is the magnitude of the electric force the proton exerts on the electron? What is the direction of the force?
+			Step 1: Draw or list what is known (In this example the location and charge of the objects)
+			Step 2: Find other variables
+				Find r: sqrt(2^2 + 2^2) = sqrt(8)
+				|F| = (1/(4 * PI * e)) * ((1.6 * (10^-19))^2)/sqrt(8)^2
+			Step 3: Solve
+				|F| = 2.9 * (10^-29) N
+
+	How to find the direction of a force
+		Unit vector [u] = P(t) - P(i) / |P(t) - P(i)|
+		Explanation: initial position minus final position divided by magnitude
+		This gives the direction and normalizes it to length 1
+
+	Electric Field
+		The distortion of an environment caused by the presence of a charged object
+		Similar to a gravitational field, but instead of depending on mass it depends on charge
+		[F(E) = q2 * (1 / 4 * PI * E(0)) * (q1 / r^2) * (r)]
+		[F(E) = q2 * E]
+		Implications of electric fields
+			You can easily calculate the force on an object anywhere in an electric field
+			Constant electric fields can create very easy calculations
+
+

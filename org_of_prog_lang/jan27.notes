@@ -1,0 +1,45 @@
+Agenda
+	Review of last lecture
+	Lecture
+	/* Work on assignment from the 22nd */
+
+
+Notes
+
+
+Lecture
+
+	Extended BNF
+		Parenthases define a grouping of identifiers
+		Pipe (|) defines an or statement - you must choose one identifier from the list
+		Braces define an identifier that can be repeated N times
+		EX:
+			<expr> --> <term> \{(+ | -) <term>\}
+			<term> --> <factor> \{(* | /) <factor>\}
+			<factor> --> <exp> \{** <exp>\}
+			<exp> --> \{<exp>\} | id
+
+	Attribute grammar
+		Desbribes when and how the syntax rules work
+		Assigns attributes (values) to nodes in parse tree
+		Attributes can be numeric values, expressions, data type, etc
+		Types of attributes
+			Synthesized - Passed up parse tree
+			Inherited - Passed down parse tree
+			Intrinsic - Defined at leaf node - standalone
+		EX:
+			Synthesized attributes are computed with semantic functions based on child nodes
+			Inherited attributes are computed based on parent and sibing nodes
+			Intrinsic attributes are defined by node, for example value of a variable
+
+	EX: BNF with attribute grammar
+		<assign> --> <var> | <expr>
+		<expr>.expected_type <-- <var>.actual_type
+		Ensures that the variables included in an expression are of the correct type
+		<expr>.actual_type --> if(...) return INT; else return FLOAT;
+
+
+
+
+
+

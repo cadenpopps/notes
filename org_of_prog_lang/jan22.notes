@@ -1,0 +1,109 @@
+Agenda
+	Review previous lecture
+
+
+Todo
+	Download stuff on class homepage
+	Sign up for Piazza
+	Reading assignment
+
+
+Lecture
+
+	Implementation of programming languages
+		Memory is used to store processes and data
+		Processor provides primitive operations that can be combined to achieve complex functionality
+		[Machine language]
+			High level code is translated to machine language in order to run complex functions in terms of primitive operations
+		Three ways programs are run
+			Compilation
+			Interpretation
+			Hybrid
+
+	Compilation
+		Slow translation helps programs execute quickly
+		Parsing
+			Takes lexical units (a, b, +, *)
+			Organizes them via a parse tree
+		Many steps such as translation, linking, etc
+		EX: C++, C
+
+	Interpretation
+		Code is translated in real time by interpreter
+			This means code may run slower
+			Requires another program to allow an interpreted program to run
+		EX: Python
+
+	Hybrid
+		Combines interepretation and compilation
+		Takes assembly as input
+		Allows code to be interpreted faster
+		Still requires another program at runtime
+		EX: Java
+
+	Von Neumann bottleneck
+		Connection speed between memory and processor is the biggest factor in the performance and speed of a program
+
+	{Begin Chapter 3}
+
+	Vocabulary
+		Syntax
+			The form and structure of statements in a programming language
+		Semantics
+			The meaning of statements in a programming language
+			In a well designed language, semantics is easily derived from syntax
+		Sentence
+			A string of characters from an alphabet
+		Lexeme
+			The lowest level syntactic unit of a language
+			EX: index, =, 2, var
+		Token
+			A category of Lexeme
+			EX: keyword, semicolon, literal, identifier
+
+	Language analysis
+		Language Recognizer
+			Determine whether the sentences in a language have the correct syntax
+		Language Generator
+			Generate sentences in a language
+			Uses generated sentences to compare and determine whether a sentece is valid
+
+	Defining syntax
+		Regular grammar
+		Context free grammar
+		BNF
+
+	BNF
+		Describes the syntax of a program
+		Uses abstractions to describe syntax structure
+		EX: <assign> -> <var> = <expression>
+		    <var> -> /[A-z].*/
+		Left hand side (LHS)
+			The abstraction being defined
+			Non-terminal
+		Right hand side (RHS)
+			Definition
+			Terminal and non-terminal
+		[Non-terminal]
+			Can have two or more definitions
+			EX: <if> -> ...
+			EX: <if> -> ... else ...
+			You may separate definitions by newline or | (or) operator
+		Recursive rules are allowed
+			Occurs when the abstraction appears in the definition
+			EX: <list> -> <identifier> | <identifier>, <list>
+		[Derivation]
+			Using the syntax (rules) of a language to verify that a given sentence is correct
+		[Parse tree]
+			A heirarchical representation of a derivation
+			Lowest in parse tree has the highest priority
+
+	Ambiguity
+		When sentence can be reached from than one derivation or parse tree
+		Arrises when the rules of the language allow for more than one output for a given input
+		Can be solved with [operator precedence] in the example of operator ambiguity
+		More generally, ambiguity can be solved via the addition of non-terminals
+
+	Associativity
+		When the LHS appears in the beginning of the RHS, a grammar rule is [left recursive]
+		When the LHS appears in the end of the RHS, a grammar rule is [right recursive]

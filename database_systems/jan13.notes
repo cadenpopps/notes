@@ -1,0 +1,62 @@
+Agenda
+	Syllabus
+	Lecture
+
+Todo
+	Get textbook
+
+Notes
+	Schedule will differ based on progress
+	One term progress broken into 4 phases by professor + demo at end of semester
+	3 homeworks this semester - due on mondays
+	Textbook - {Fundamentals of Database Systems 6th edition}
+	Assignments are due on monday
+	Prerequisite
+		CS 3345 (Algorithm Analysis and Data Structures)
+	Grading
+		Assignments - 15%
+			Assignment 1 - 3%
+			Assignment 2 - 5%
+			Assignment 3 - 7%
+		Project - 15%
+		Midterm - 30%
+		Final - 40%
+	Organization of semester
+		Conceptual data model
+		Logical DB design
+		Database design theory
+		Present projects/final
+
+
+Lecture
+	What is a Database?
+		Collection of data
+		Data is known facts that can be recorded and have implicit meaning
+	Essential to the operation of enterprise
+		Contains the only record of enterprise activity
+		Historical data can guide decisions and strategy
+	Database is persistent
+	Databases work with the Mini-world
+		Some aspect of the real world that is represented through data
+
+	DBMS - Database Management System
+		Program or software package that manages a database
+		Supports high level access language
+		Application describes database access
+		DMBS interprets statements of language to perform operations
+		Supports concurrent, secure, atomic, access to high volume data
+
+	Database System
+		The combination of data and a DBMS creates a database system
+		Provides the backend of data driven applications
+
+	DBMS Marketplace
+		Relational DBMS Companies
+			Oracle
+			Sybase
+		IBM offers DB2
+			Nonrelational, one of the largest DBMS vendors
+		Mivrosoft SQL server
+		Relational companies are challenged by Object Oriented DB companies
+			Created object relational database to counter
+

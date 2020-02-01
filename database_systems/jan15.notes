@@ -1,0 +1,151 @@
+Agenda
+	Lecture
+
+Notes
+
+	{Relation table}
+		2d tables that represent relationships among entities and attributes
+
+
+Lecture
+
+	Major database concepts
+		Data and information
+			Data = raw facts
+			Information = processed data
+		Database
+			Stores our data in a specific structure
+		Metadata
+			Data about our data
+			EX: When was our data collected?
+		DBMS
+			Database management system helps interact with the database effieciently and safely
+
+	Database example
+		Model - University environment
+		Entities and relevant attributes (properties)
+			Students
+				ID
+				Name
+				Courses
+					Section
+			Courses
+			Sections (of a given course)
+			Department
+			Instructor
+		Relationship
+			Courses have sections
+			Students take sections
+			Courses have prerequisite Courses
+			etc...
+
+	Benefits of DBMS
+		Control redundant data
+			Makes development and maintanence easier
+		Sharing of data
+		Restricting access of data
+		Provide separate interface to different users
+		Represent relationships in data
+		Enforce constaints on data - integrity constraint
+		Flexibility to change data structures
+		[Bottom line]
+			Saves time
+			Saves money
+			Increases security and safety
+
+	Drawbacks of DBMS
+		High initial investment creates overhead for simple or small projects
+		Can be overkill for
+			Simple Data
+			Low Volume
+
+	Three aspects of DBMS
+		Modeling and design
+			Allows experimentation before committing to an implementation
+		Programming
+			Allows operations on databases
+				EX: get, update, remove
+			EX: SQL
+		Implementation
+			Optimization
+			Processing
+			Transaction
+			Concurrency control
+
+	Database technology
+		Metadata
+			Contains a description of the database
+			Promotes portability
+		{Program-data independence}
+			Level of abstraction between data and program
+			Allows changing of data structures or functionality without changing the connection
+		Abstraction
+			Hide implementation of storage from user and higher level programs
+		Multiple view
+			Show different data to different users
+		Share data and concurrency
+			Keep data safe when it is shared among many
+
+	Data Model
+		Describes the abstract structure of a database
+		Includes
+			Contraints
+			Data types
+			Relationships
+		Provides abstraction
+			Does not describe the tables or schemas
+		Operations
+			Describes what actions can be performed on the database
+
+	Types of data models
+		Conceptual
+			High level - describes the abstract
+			Describes the data in a way user perceives it using human language, relationships, etc.
+			Also called {entity-based} and {object-based} data models
+		Physical
+			Low level - describes the implementation
+			Describes how the data is stored on the computer
+		Implementation (record-oriented)
+			Mid level - balances abstract representation and implementation
+
+	High level data models
+		Record based
+			Relational
+			Network
+			Hierarchical
+		Object based
+			Closest to human perception (furthest from implementation)
+
+	Low level data
+		Data is hard to work with at very low level, so we use abstraction
+		Use schemas
+
+	{Schema}
+		Description of data at some level (not the data itself)
+		Every level has a schema
+		Three types
+			Physical/Internal - low level
+			Conceptual - high level - logical database design
+			External - user level
+		{Schema diagram}
+			Visual representation of the data the schema represents
+
+	Database Schema
+		Description of a database - contains structure and constraints
+		Specified during design - does not change frequently
+
+	Database State
+		Database instance
+			What data the database contains at a given time
+			Also called state and extension
+		Database schema
+			The structure and abstract representation of what a database can contain
+			Also called intension
+
+	Schema Example
+		Student
+			StudentName, StudentNumber, Class, etc.
+		Course
+			CourseName, CourseNumber
+		Etc
+

@@ -1,0 +1,44 @@
+Agenda
+	Review
+
+
+Notes
+
+
+Lecture
+
+	I/O aware scheduler
+		Treat a job with I/O as several smaller jobs, split by CPU time and I/O time
+		When a job begins its I/O time, schedule the nexxt process
+		When a job ends its I/O time, give it another CPU burst
+
+	Time slice of scheduler
+		Shorter time slice allows faster response time but increases overhead
+		Longer time slice allows more efficient CPU usage but slower response time
+
+	Round robin
+		Shorter time slices
+		Allows us to ignore run time
+		Does not care whether a process terminates
+
+	General purpose scheduling
+		Two types of jobs
+			Interactive jobs which need fast response time
+			Batch jobs which want fast turnaround time
+		Run interactive jobs first
+		Run shorter jobs before longer jobs
+		Assign high priority at first, decrease priority the longer a job runs
+		If a job uses the entire time slice, reduce priority
+		Reset process priority after timer expires (move to top of queue)
+			Prevents starvation
+
+	Multilevel feedback queue (MLFQ)
+		Two dimensional queue where high priority jobs run first in round robin
+		The longer a job sticks around, the lower it's priority
+		Mimics shortest job first
+
+	Problems with MLFQ
+		Gaming the scheduler
+			Give up control right before time slice expires
+			Keep high level priority while using most of the CPU
+

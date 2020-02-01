@@ -1,0 +1,109 @@
+Agenda
+	Demonstrate how to access the csjaws.utdallas.edu
+	Discuss interrupt table and system call table with partner
+	Powerpoint
+
+
+Notes
+
+	Every interrrupt has an interrupt handler and an entry in the interrupt table
+		This is hardware specific - but generalized to things like system call, keyboard, divide by 0, etc
+
+	Every system call has an entry in the system call table, and this can be expanded by software and is decided by the kernel
+
+Lecture
+
+	Problems with direct execution
+		Process could do something restricted
+			Solved by the system call interrrupt - protected operations
+		Process could hog the CPU
+			Scheduler and dispatcher
+		Process could do something slow (I/O)
+			Not yet solved
+
+	How we share the CPU among processes
+		Take the CPU away from a process
+			Required for multitasking
+		Problems with taking CPU away from a process
+			Policy: When do we switch processes? Which is the next process?
+			Mechanism: How do we switch processes?
+		Separation of policy and mechanism
+			Policy is decided by scheduler (decision maker)
+			Mechanism is controlled by the dispatcher
+
+	Dispatcher
+		Mechanism of the OS that distributes CPU time between processes
+		How does the dispatcher work?
+			Step 1: scheduler decides which process goes next
+			Step 2: save the context of the current process
+				Program counter
+				Stack pointer
+				Register values
+			Step 3: restore the context of the next process
+		When does the dispatcher gain control?
+			When a process makes a system call
+				Process may not make system calls often or ever
+			Process can manually yield() control
+				Rare for a process to want to give away control
+		The only way to guarentee dispatcher control is a [timer interrupt]
+			The OS regains control after set time
+			The dispatcher can shift control at this point
+			Common time range is 10ms - 200ms
+			User must not be able to mask the timer interrupt
+
+	Context switching
+		What is saved during a context switch
+			Registers
+			IP
+			Stack Pointer
+			Processor status register
+		Where can we save the context
+			Process control block (PCB) - Unix
+			Proc struct - xv6
+		What is saved in the PCB
+			PID
+			Process state
+			Execution state (registers)
+			Scheduling priority
+			Accounting information (parent/child)
+			Credentials (permissions/ownership)
+			Pointers to resources (open files)
+		Overhead in context switching - [context switch time]
+			To decrease overhead the PCB must be stored in fast memory
+			The context switch time must be low compared to the time given to an individual process
+				Otherwise, we lose efficiency by running the dispatcher instead of the programs
+
+	What if the process executes something slow
+		Process waiting for I/O is blocked until I/O is complete
+		Process state transition
+			Running -> Blocked -> Ready
+		Only processes in ready state will be considered by scheduler
+		OS maintains a queue for processes
+			Ready queue: contains all ready processes
+			Event queue: one event per process
+				Disk I/O lock
+				Contains the processes waiting on an event to complete
+
+	Scheduler
+		Initial assumptions
+			Each job runs the same amount of time
+			All jobs arrive at the same time
+			All jobs use only the CPU, with no blocking operations
+			The run time of all jobs is known
+
+	Performance metrics
+		Turnaround time
+			T(turnaround) = T(completion - T(arrival)
+		Reponse time
+		Fairness
+		Metrics are usually conflicting
+		We want to optimize turnaround time
+
+	Scheduler algorithm ideas
+		FIFO
+			Run in the order of arrival
+			Average turnaround time is optimal if jobs don't run the same amount of time
+		Greedy (Shortest job first)
+			Works only if all jobs arrive at the same time
+		Greedy (Shortest time to completion first)
+			Requires taking the CPU away from a running job

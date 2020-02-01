@@ -1,0 +1,26 @@
+Agenda
+	New TA announcement
+	Slides
+	Xv6 demonstrations
+
+Notes
+
+
+Lecture
+
+	MLFQ summary
+		MLFQ has a queue of priorities where highest priority levels always run first
+		Each priority level has a queue of jobs which get CPU time one by one
+		A job maintains its priority as long as it uses less time than the time slice given to it
+		If a job takes the full time slice, it gets demoted one priority level
+		After a certain amount of time, all processes get promoted back to the highest priority to prevent starvation
+		Over time, the more interactive jobs maintain higher priority and the batch jobs are relegated to low priority
+
+	Lottery Scheduling
+		Proportional share
+			Every job gets a percentage of CPU time
+		Lottery method
+			Give every job tickets
+			Higher priority jobs get more tickets
+			CPU time goes to randomly selected winner proportional to number of tickets
+

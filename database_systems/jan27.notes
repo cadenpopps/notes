@@ -1,0 +1,112 @@
+Agenda
+	Lecture slides
+
+
+Notes
+	Primary keys only applies to relational databases
+
+
+Lecture
+
+	ER diagram notation
+		Box: entity type
+		Double box: weak entity type
+		Diamond: relationship type
+		Double diamond: identifying relationship type
+		Circle: attribute
+		Circle with underline inside: key attribute
+		Double circle: multivalue attribute
+		Many connected circles: composite attribute
+		Transparent circle: derived attribute
+
+	ER model concepts
+		[Entity]: objects in the mini-world that are represented in the database
+			EX: employee, department, company
+		[Attribute]: properties used to describe entities
+			Can be assigned to an entity type
+				EX: name, employeeID, department
+			Simple attributes: single atomic value of an entity (value)
+				EX: employeeID = 601937534
+			Composite attribute: value with multiple components (object) - {Parenthases}
+				EX: address = (houseNumber, streetName, city, state, zip, etc)
+			Multi-value: multiple related values of an entity (list) - {Curly bracket}
+				EX: carColor = \{red, black, white\}
+			Attributes may be nested to achieve a greater level of complexity
+			Complex attributes are made up of a combination of composite and multi-value attributes
+
+	Entity types and key attributes
+		[Entity type]: entities with identical basic attributes
+		[Key attributes] are attributes which must be {unique} to an entity
+			Can be used to represent an ID for identification purposes
+			EX: SSN of an EMPLOYEE, studentID of STUDENT
+			Key attributes may be composite
+				EX: vehicleTag = (number, state)
+			Key attributes are underlined
+			Entity types can have have more than one key attribute
+				EX: vehicleTag = (number, state), vehicleLicensePlate = 812641
+
+	EX: CAR entity type
+		Registration (registrationNumber, state), vehicleID, make, model, year, \{color\}
+		Color = \{color1, color2, etc..\}
+		EX: caden_car
+			(12413, texas), 12523, toyota, avalon, 2003, \{white, gold\}
+
+	Entity type
+		Description of a specific object
+			Describes the attributes a type of entity posesses
+		Called intension
+
+	Entity set
+		The set of all entities matching an entity type in a database
+		Called extension
+
+	Relationships and relationship types
+		[Relationship]: relates two or more specific entites with a real world meaning
+			EX: student takes course
+		[Relationship type]: all relationships with the same type of participants
+			EX: TAKES_COURSE, WORKS_IN_DEPARTMENT
+		[Degree of a relationship]: number of entity types that participate in a relationship
+		More than one relationship can exist between two entity types
+			EX: WORKS_FOR and MANAGES_EMPLOYEE
+
+	Relationship set
+		The set of all relationships of the same type in a database
+
+	Weak entity type
+		Any entity that does not have a key attribute
+		Weak entities must participate in a relationship with an owner or identifying entity type
+		[Partial key]: unique attribute among other weak entities owned by the same entity
+
+	EX: COMPANY database
+		COMPANY has DEPARTMENTS
+		DEPARTMENTs have name, number, location, and the employeeID of the managing employee
+			Key attribute is departmentNumber
+		DEPARTMENTs control PROJECTS
+		PROJECTs have a name, number, and location
+			Key attribute is projectNumber
+		EMPLOYEEs have SSN, name, gender, salary, etc
+			Key attribute is SSN
+		EMPLOYEE works_for one DEPARTMENT
+		EMPLOYEE works_on one or more PROJECTS
+		EMPLOYEE works_under one supervisor (EMPLOYEE)
+		EMPLOYEEs have one or more DEPENDENT
+		DEPENDENTS have name, gender, relationship to emloyee
+			Does not have a key attribute - weak entity type
+			Identifying relationship with employee
+		Entity types: COMPANY, DEPARTMENT, PROJECT, EMPLOYEE, DEPENDENT
+		Relationship types: has_project, work_for, work_on, work_under, has_dependent, supervises_employees
+
+	Constraints on aggregation
+		Cardinality constraints of binary relationships (ratio constraints)
+		Maximum cardinality
+			One to one
+			One to many
+			Many to one
+			Many to many
+			EX: employees in a department - many to one
+		These relationships do not define specific number constraints, only variable
+			EX: would not work for students who can only take 2 majors
+		Minimum cardinality
+			Zero
+			One (or more)
+
