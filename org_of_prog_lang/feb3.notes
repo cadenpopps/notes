@@ -1,0 +1,24 @@
+Agenda
+	Introduction to syntax and lexical analyzers
+
+
+Notes
+
+
+Lecture
+
+	Lexical analyzer
+		Small scale items like characters
+		Simpler than syntax analysis
+		Takes a significant portion of compile time
+		Is usually platform dependent
+
+	Lexical analysis
+		Groups input program into lexemes and assigns a token to each
+			Depends on the structure
+		Use state diagram to describe the pattern of the token
+
+
+	Syntax analyzer
+		Large scale items like
+

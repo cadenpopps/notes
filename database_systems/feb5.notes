@@ -1,0 +1,27 @@
+Agenda
+	Extended EER
+
+
+Notes
+
+
+Lecture
+
+	Extended entity relationship model (EER)
+		Incorporates set-subset relationships
+		Incorporates generalization hieracrchies
+		Constraints
+			Disjointness - can subtypes overlap
+				Disjoint
+				Overlaps
+			Completeness - supertype must also be subtype
+				Partial
+				Total
+		Inheritance
+			Attributes
+			Relationship type
+		Limitations
+
+
+
+

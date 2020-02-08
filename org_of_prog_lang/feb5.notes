@@ -1,0 +1,29 @@
+Agenda
+
+
+Notes
+
+
+Lecture
+
+	Parser
+		Determine whether program is syntactically correct
+
+	Top down parser
+		Constructs a parse tree from top to bottom (root to leaves)
+		Matches left-most derivation
+
+	Bottom up parser
+		Begins at leaves and progresses towards the root
+		Reverse of right-most derivation
+		EX:
+			S --> aAc
+			A --> aA|b
+
+			aabc
+			aaAc
+			aAc
+			S
+
+
+

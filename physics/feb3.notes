@@ -1,0 +1,73 @@
+Agenda
+	Review vector operation
+	Review force and torque
+	Electric dipole force and torque
+
+Notes
+	Force is proportional to mass and acceleration
+		F = ma
+	Torque is proportional to moment of intertia and angular acceleration
+		T = l X F
+		l = lever arm
+		X is cross product
+		Torque is respective to the center of rotation
+
+Lecture
+
+	Cross product
+		|A||B|sin(THETA)
+		Proportional to magnitude of A and B, and how close together they are
+		The greater the angle between A and B, the smaller the cross product
+
+	Scalar (dot) product
+		Projection of vector B into vector A
+		If A and B are perpendicular, the dot product is 0
+
+	Vector direction symbols
+		Circle with X means perpendicular to plane going in
+		Circle with dot means perpendicular to plane going out
+
+	Electric field
+		F = qE
+		E = electric field
+		Positive charges are forced along electric field
+		Negative charges are forced against the electric field lines
+
+	Electric dipoles in an electric field
+		Since the charges are opposite, they are forced in opposite directions
+		Since the charges are connected in some way, the force creates torque
+		Dipole moment p = qd
+			d = distance between charges
+			q = charge
+		Torque T = p X E
+			Cross product of moment and electric field
+
+	Electric field from distribution of charges
+		E = K SUMMATION(q / r^2)
+		E = K INTEGRAL(dq / r^2)
+
+	Charge from electric field
+		The flux of an electric field through a closed surface
+			Proportional to the charge inside the surface
+		A closed surface encloses a region completely
+			If it has edges it is open -- not really
+			Cubes are closed
+
+	Electric flux
+		The density (proximity) of electric field lines represents magnitude (E) of field
+		Electric flux represents the amount of electric field passing through a surface
+			AKA the amount of field lines passing through
+		Flux PHI = EA
+			For angled surface PHI = EAcos(THETA)
+		Through curved surface
+			PHI = INTEGRAL(E * dA)
+		Through closed surface
+			PHI = CIRCLE_INTEGRAL(E * dA)
+		For a sphere
+			PHI = q/E(0)
+
+	Gauss's law
+		PHI = CIRCLE_INTEGRAL(E * dA) = q/E(0)
+		Net electric flux through a closed surface is proportional to charge inside the surface
+		2x charge = 2x flux
+		4x charge = 4x flux

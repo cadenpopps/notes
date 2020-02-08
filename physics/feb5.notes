@@ -1,0 +1,27 @@
+Agenda
+	Application of Gauss's law
+
+
+Notes
+	The shape of a closed surface does not matter for Gauss's law
+
+
+Lecture
+
+	Applications of Gauss's law
+		Very useful when we know the direction of the field from symmetry of charge distribution
+
+	Conductors in electrostatic equilibrium
+		Conductors
+			Metallic bonds
+			Electrons are free to move
+		Electrostatic equilibrium
+			Charged particles are not in motion
+		Four properties of conductors in electrostatic equilibrium
+
+	Properties
+		E is zero anywhere in the conductor
+		Net charge (if any) resides on the surface of the conductor
+		E outside conductor is perpendicular to surface and magnitude is |E| = PHI/E(0)
+		For irregularly shaped conductors, PHI is greatest where the radius of curvature is smallest
+

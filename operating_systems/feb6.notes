@@ -1,0 +1,57 @@
+Agenda
+	Discuss test and testing center
+
+
+Notes
+
+
+Lecture
+
+	Review segmentation
+		Assuming 14 bit virtual address
+			High 2 bits indicate segment
+			0 -> code
+			1 -> heap
+			2 -> stack
+
+	Problems with segmentation
+		Fragmentation
+			Memory that cannot be allocated
+			Allocated memory is too big
+
+	Paging
+		Divide physical memory into fixed sized [frames]
+		Divide virtual memory into same sized [pages]
+		Application's virtual pages (in order) map to physical frames (out of order)
+
+	Address format
+		Consists of page number and offset within page
+			Higher order bits for page number
+			Lower order bits for offset within page
+		Length of offset depends on size of page
+		EX:
+			16 bytes per page
+				Need 4 bits of offset
+			1KB
+				1024 = 2^10 = 10 bits
+			1MB
+				1M = 2^20 = 20 bits
+
+	Where do we store page table
+		Store each page table in memory
+		How do we find page table
+			Address stored in a register called [page table base register] (PTBR)
+			Hardware uses PTBR (CR3 for x86)
+		Context switch
+			Save page table address to the proper location so the hardware looks at the correct pages when it needs it
+
+	Advantages of paging
+		No external fragmentation
+		Fast to allocate and free
+			Alloc: no searching for suitiable free space
+			Free: doesnt 
+
+	Disadvantage
+		Internal fragmentation with large pages
+		Additional memory reference for page table
+		Page table size can be high
