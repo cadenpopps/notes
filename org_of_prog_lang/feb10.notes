@@ -1,0 +1,17 @@
+Agenda
+	Lecture (WHAT IS PARSER??? WHAT IS PARSER??? WE TALK ABOUT uhhhhhhhh BOTTOM UP PARSER???)
+
+
+Notes
+
+
+Lecture
+	Recursive descent parsing
+		Does not work for left recursion grammar
+			Contains LHS of statement in the beginning of the RHS
+
+	Bottom up parsing
+		Start with right most derivation
+		Replace tokens until you arrive at statement
+		Uses a LR parsing table
+

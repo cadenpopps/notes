@@ -1,0 +1,88 @@
+1.1. Define the following terms:
+Data
+Database
+DBMS
+Database system
+Database catalog
+Program-data independence
+User view
+DBA
+End user
+Canned transaction
+Deductive database system
+Persistent object
+Meta-data
+Transaction-processing application
+1.3. Discuss the main characteristics of the database approach and how it differs from traditional file systems.
+1.14. Consider Figure 1.2.  a. If the name of the ‘CS’ (Computer Science) Department changes to ‘CSSE’ (Computer Science and Software Engineering) Department and the corresponding prefix for the course number also changes, identify the columns in the database that would need to be updated.  b. Can you restructure the columns in the COURSE, SECTION, and PREREQUISITE tables so that only one column will need to be updated?
+
+2.1. Define the following terms:
+Data model
+Database schema
+Database state
+Internal schema
+Conceptual schema
+External schema
+Data independence
+DDL
+DML
+SDL
+VDL
+Query language
+Host language
+Data sublanguage
+Database utility
+Catalog
+Client/server architecture
+Three-tier architecture
+N-tier architecture
+
+2.3. What is the difference between a database schema and a database state?
+2.4. Describe the three-schema architecture. Why do we need mappings between schema levels? How do different schema definition languages support this architecture?
+2.6. What is the difference between procedural and nonprocedural DMLs?
+2.15. Consider Figure 2.1. In addition to constraints relating the values of columns in one table to columns in another table, there are also constraints that impose restrictions on values in a column or a combination of columns within a table. One such constraint dictates that a column or a group of columns must be unique across all rows in the table. For example, in the STUDENT table, the Student_number column must be unique (to prevent two different students from having the same Student_number). Identify the column or the group of columns in the other tables that must be unique across all rows in the table.
+
+7.3. Define the following terms:
+Entity
+Attribute
+Attribute value
+Relationship instance
+Composite attribute
+Multivalued attribute
+Derived attribute
+Complex attribute
+Key attribute
+And value set (domain)
+7.6. What is a relationship type? Explain the differences among a relationship instance, a relationship type, and a relationship set.
+7.11. What is meant by a recursive relationship type? Give some examples of recursive relationship types.
+7.12. When is the concept of a weak entity used in data modeling? Define the terms owner entity type, weak entity type, identifying relationship type, and partial key.
+7.17. Composite and multivalued attributes can be nested to any number of levels.  Suppose we want to design an attribute for a STUDENT entity type to keep track of previous college education. Such an attribute will have one entry for each college previously attended, and each such entry will be composed of college name, start and end dates, degree entries (degrees awarded at that college, if any), and transcript entries (courses completed at that college, if any). Each degree entry contains the degree name and the month and year the degree was awarded, and each transcript entry contains a course name, semester, year, and grade. Design an attribute to hold this information. Use the conventions in Figure 7.5.
+7.18. Show an alternative design for the attribute described in Exercise 7.17 that uses only entity types (including weak entity types, if needed) and relationship types.
+7.23. Consider the ER diagram shown in Figure 7.21 for part of a BANK database. Each bank can have multiple branches, and each branch can have multiple accounts and loans. a. List the strong (nonweak) entity types in the ER diagram. b. Is there a weak entity type? If so, give its name, partial key, and identifying relationship. c. What constraints do the partial key and the identifying relationship of the weak entity type specify in this diagram? d. List the names of all relationship types, and specify the (min, max) constraint on each participation of an entity type in a relationship type. Justify your choices. e. List concisely the user requirements that led to this ER schema design. f. Suppose that every customer must have at least one account but is restricted to at most two loans at a time, and that a bank branch cannot have more than 1,000 loans. How does this show up on the (min, max) constraints?
+7.27. Cardinality ratios often dictate the detailed design of a database. The cardinality ratio depends on the real-world meaning of the entity types involved and is defined by the specific application. For the following binary relationships, suggest cardinality ratios based on the common-sense meaning of the entity types. Clearly state any assumptions you make.  Entity 1 Cardinality Ratio Entity 2
+1. STUDENT ______________ SOCIAL_SECURITY_CARD
+2. STUDENT ______________ TEACHER
+3. CLASSROOM ______________ WALL
+4. COUNTRY ______________ CURRENT_PRESIDENT
+5. COURSE ______________ TEXTBOOK
+6. ITEM (that can be found in an order) ______________ ORDER
+7. STUDENT ______________ CLASS
+8. CLASS ______________ INSTRUCTOR
+9. INSTRUCTOR ______________ OFFICE
+10. EBAY_AUCTION_ITEM ______________ EBAY_BID
+
+8.2. Define the following terms:
+Superclass of a subclass
+Superclass/subclass relationship
+IS-A relationship
+Specialization
+Generalization
+Category
+Specific (local) attributes
+Specific relationships
+8.4. Discuss user-defined and predicate-defined subclasses, and identify the differences between the two.
+8.17. Consider the BANK ER schema in Figure 7.21, and suppose that it is necessary to keep track of different types of ACCOUNTS (SAVINGS_ACCTS, CHECKING_ACCTS, ...) and LOANS (CAR_LOANS, HOME_LOANS, ...).  Suppose that it is also desirable to keep track of each ACCOUNT’s TRANSACTIONS (deposits, withdrawals, checks, ...) and each LOAN’s PAYMENTS; both of these include the amount, date, and time. Modify the BANK schema, using ER and EER concepts of specialization and generalization. State any assumptions you make about the additional requirements.
+8.26. Which of the following EER diagrams is/are incorrect and why? State clearly any assumptions you make.
+
+
+

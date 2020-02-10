@@ -1,0 +1,116 @@
+Agenda
+	Relational model concepts
+	Characteristics of relations
+	Relational integrity constraints - [ICs]
+		Key contraints - Intra
+		Entity integrity contraints - Intra
+		Referential integrity contraints - {foreign key} - Inter
+	Operations
+
+Notes
+
+
+Lecture
+
+	Relational model theoretical foundation
+		Middle level implementation data model
+
+	Basis of relational model
+		[Relation] - a mathematical concept based on sets
+		The relationship model is based on the idea of a relation
+		Proposed by Dr. E. F. Codd of IBM
+
+	Relational model
+		A particular way of structuring data
+		Simple and based in mathematics
+
+	Informal definitions
+		[Relation] - A table of values
+			May be thought of as a set of rows
+			May be thought of as a set of columns
+			Each row is usually given an identifier
+			Each column is usually given an attribute name
+			Thus entities span horizontally, and attributes span vertically
+
+
+	Characteristics of relations
+		Tuples are not ordered like a set
+		Ordering of attributes is also not important
+		Values in a tuple
+			Atomic
+			Non-divisible
+			NULL is acceptable for unknown or non applicable attributes
+			Key attribute can never be NULL
+		Notation
+			t\[Ai\] = vi
+				This means the value of attribute Ai for element t
+			Also t\[A1, a2, ... \]
+				This means the values of attributes A1 - AN for element t
+
+	Relational model terminology
+		{Tables} are [relations]
+		{Column headers} are [attributes]
+		{Rows} are [tuples]
+		[Domains] are all the possible values of each attribute
+		[Relation schema] attributes + other structures
+			Integrity constraints
+			Keys
+		[Relation instance] is the current set of rows in a schema
+		[Database schema] is the current set of tables in a schema
+			Collection of relational schema
+
+	Formal definitions
+		[Relations] can be defined in multiple ways
+		The [schema] of a relation
+			R(A1, A2, ... AN)
+		A relation is a set of tuples or a set of attributes
+		A relation is the cartesian product of the sets
+			Each set has values from a domain
+			Domain is used in a specific role which is conveyed by attribute name
+		EX: CUSTOMER(cust-id, cust-name, address, phone-number)
+			Customer is a relation defined over four attributes
+			Each attribute has a domain of valid values
+			A tuple is an ordered set of values
+				EX: <235235, "John doe", ...>
+
+	Definition summary
+		{Informal} 		{Formal}
+		Table 			Relation
+		Column 			Attribute/domain
+		Values in col 	Domain
+		Row 			Tuple/entity/instance
+		Table def 		Schema of relation
+		Pop table 		Extension (vs intension)
+
+	Relation instance
+		No duplicate tuples
+		[Cardinality] is the number of rows
+			This is equal to the number of entities/tuples
+		All tuples in a schema have the same structure
+		[Arity] the number of attributes defined in a relation/schema
+			Also called {degree}
+
+	Relation schema
+		Relation name
+		Attribute names
+		Domains
+		Integrity contraints
+			Uniqueness
+			Values of an attributes must be greater than 0
+
+	Relational database
+		Finite set of relations
+		Every relation has a schema and an instance
+		[Database schema] - set of relationship schemas and ICs
+		[Database instance] - the actual DB
+
+	Integrity constraints
+		Part of a schema
+		Define the restrictions on the 'state'
+		Enforced by DBMS
+		Intra-relational - only involves one relation
+			Part of relation shcema
+			EX: unique IDs
+		Inter-relational - involve more than one relation
+			Part of relation or database schema
+

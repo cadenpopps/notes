@@ -1,0 +1,64 @@
+Agenda
+	Study Tips
+
+
+Notes
+	Slides ans lectures highlight the important points
+		Book has additional information
+
+	HW helps to practice and analyze situations
+		Formula sheet and calculator
+
+
+Lecture
+
+	[Electrostatic]
+		Electrons aren't moving (they are static)
+
+	Properties of electrostatic equations
+		E is zero anywhere inside the conductor
+			Solid or hollow
+		Net charge resides on the surface of a conductor
+		E just outside of surface of conductor is perpendicular to surface
+		E just outside of surface of conductor has magnitude |E| = sigma / E(0)
+		On irregularly shaped conductors, sigma is greatest where radius of curvature is smallest
+
+	Electric field is zero inside the conductor
+		Electrostatic equilibrium requires no motion of charges
+		No motion requires F = qE = 0 inside the conductor
+		Since we have no motion, we know the net force is 0, and thus E is 0
+		EX: Faraday cage
+			Protection of electronics
+			Antennas outside cars
+			Shielding in cables
+			Tin foil hat
+
+	Net charge (if any) will reside on the surface of a conductor
+		Gauss's law dictates there cannot be electrons on the inside
+			If there were, there would be an electric field inside the conductor
+
+	Electric field just outside the conductor is perpendicular to its surface
+		We know it is perpendicular because the charge is on the outside
+		We know the magnitude is sigma / E(0) because of Gauss's law
+
+	The sigma (or density of charge) is greatest where the radius of curvature is smallest
+		We need electric potential to understand this concept
+
+	EX: What is the electric field inside and outside the charged spherical conductor
+		E(r) = Q/kr^2
+
+	Reminders
+		Gravitational potential energy
+
+	Electric potential energy
+		Uniform electric field
+			Potential electric energy is in the direction of the force
+			If a positive charge moves opposite to the field, the change in potential energy is positive
+			Opposite is true for negative charge
+		Non-uniform electric field
+
+
+
+
+
+
