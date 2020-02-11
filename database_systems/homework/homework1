@@ -1,46 +1,98 @@
 1.1. Define the following terms:
 Data
+	Known facts that can be recorded and have implicit meaning
 Database
+	A collection of data
 DBMS
+	Database management system
+	Program or software package that manages a database
 Database system
+	The combination of data and a DMBS (real world implementation)
 Database catalog
+	Set of tables stored in a file which represents the data and structure of a database
 Program-data independence
+	The ability to change the implementation of one schema or program without affecting the data or other schemas
 User view
+	The external schema, or what the user sees and how they interact with data
 DBA
+	Database administrator
 End user
+	The person that interacts with the final implementation of the data (the external schema)
 Canned transaction
+	Pre-programmed interaction that is carefully tested beforehand
 Deductive database system
+	Database which can make additional deductions based on the data it alread has
 Persistent object
+	An object saved to a specific storage location in a database. This object can be accessed by multiple processes	\
 Meta-data
+	Data about the database and data
 Transaction-processing application
+	A system which performs operations on a transactional (individual operation) level in order to accomplish it's goal
+
 1.3. Discuss the main characteristics of the database approach and how it differs from traditional file systems.
+	Databases become far easier to maintain, change, and secure than file systems especially as the amount of data stored increases. Databases are designed to work quickly, maintain abstraction through tools like DMBS, and are far more secure because of the same tools and constraints.
+
 1.14. Consider Figure 1.2.  a. If the name of the ‘CS’ (Computer Science) Department changes to ‘CSSE’ (Computer Science and Software Engineering) Department and the corresponding prefix for the course number also changes, identify the columns in the database that would need to be updated.  b. Can you restructure the columns in the COURSE, SECTION, and PREREQUISITE tables so that only one column will need to be updated?
+A)
+Student - Major
+Course - Course_number
+Course - Department
+Section - Course_number
+Prerequisite - Prerequisite_number
+B)
+Yes
+The course table should have a course ID which isn't dependent on the name of the department or course number. Every time the course is referred to in another table (PREREQUISITE and SECTION tables), they should use the unique ID.
 
 2.1. Define the following terms:
 Data model
+	Describes the abstract structure of a database
 Database schema
+	Description of a database containing its structure and constraints
 Database state
+	The actual instance or state of a database. What the database contains at a given time
 Internal schema
+	Low level implementation of a database such as storage on the disk
 Conceptual schema
+	Mid level implementation of a database which defines the entities, attributes, and relationships of a database
 External schema
+	High level representation of a database which is user facing. There are usually several external schemas, and each hides a different amount of data from the user
 Data independence
+	Allows data and implementation of each layer/schema to be separate. This allows for stability and freedom of implementation
 DDL
+	Data definition language - compiles to a catalog file
 DML
+	Data manipulation language - interact with DB
 SDL
+	Storage definition language - physical
 VDL
+	View definition language - external
 Query language
+	Method of interacting with a database, usually through a DBMS. One example is SQL
 Host language
+	The language used for database application programming
 Data sublanguage
+	The part of a programming language which handles interacting with and defining a database
 Database utility
+	A tool used to edit and/or interact with a database
 Catalog
+	The file representation of a database instance and schema
 Client/server architecture
+	The software model in which a client program interacts with a server in order to deliver data to the user
 Three-tier architecture
+	Architecture in which the logic, data-access, and user interface are developed as independent modules which plug into each other
 N-tier architecture
+	Architecture in which several components are used to separate the logic, data, and user-facing parts of an application.
 
 2.3. What is the difference between a database schema and a database state?
+	The database schema describes the structure and relations of a database, and is essentially a template for how a database should look. A database state is a collection of populated tables and relations, and is what a database contains at a given time.
 2.4. Describe the three-schema architecture. Why do we need mappings between schema levels? How do different schema definition languages support this architecture?
+	The three schema architecture is a model in which data storage, logic, and presentation are kept separate in order to enable quick changes and stable operation. The mappings between layers mean that when one layer changes, it does not affect the other layers in terms of 'I/O'. The other layers can expect the same data in the same format from the other layers. Different definition languages allow for optimized code at all three levels. It is difficult to model an efficient database in terms of how a user wants to view data, but if it is optimized at the physical level it can be abstracted to the user and presented in an easy to digest way.
+
 2.6. What is the difference between procedural and nonprocedural DMLs?
+	Procedural DMLs allows a programmer to specify what and how a computer should manipulate data. Non procedural DMLs allow a programmer to only specify what to do, allowing the computer to figure out how. This brings the advantage of a low learning curve and easy debugging.
+
 2.15. Consider Figure 2.1. In addition to constraints relating the values of columns in one table to columns in another table, there are also constraints that impose restrictions on values in a column or a combination of columns within a table. One such constraint dictates that a column or a group of columns must be unique across all rows in the table. For example, in the STUDENT table, the Student_number column must be unique (to prevent two different students from having the same Student_number). Identify the column or the group of columns in the other tables that must be unique across all rows in the table.
+
 
 7.3. Define the following terms:
 Entity
